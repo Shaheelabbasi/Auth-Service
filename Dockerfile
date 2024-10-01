@@ -5,7 +5,7 @@ FROM node:20
 WORKDIR /usr/src/app/authservice
 
 # Copy the package.json and package-lock.json files to the working directory
-COPY authservice/package*.json ./
+COPY package*.json ./
 
 # Install dependencies
 RUN npm ci --only=production
