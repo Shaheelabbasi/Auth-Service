@@ -36,13 +36,13 @@ jobs:
 
     - name: Verify Metrics Endpoint
       run: |
-        curl -f http://localhost:9000/metrics
+        curl -fhttp://localhost:9000/metrics
         # Adjust the URL if necessary
 
     - name: Build and push Docker Image
       uses: mr-smithers-excellent/docker-build-push@v4
       with:
-        image: shaheel456/reactjsdemo
+        image: shaheel456/auth-service
         registry: docker.io
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
