@@ -11,7 +11,7 @@ COPY authservice/package*.json ./
 RUN npm ci --only=production
 
 # Copy the rest of the application code to the working directory
-COPY authservice .
+COPY . .
 
 # Build the application (if there is a build step)
 RUN npm run build --if-present
