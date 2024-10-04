@@ -57,13 +57,13 @@ UserSchema.methods.IspasswordCorrect=async function(password)
 }
 
 UserSchema.methods.GenerateAccessToken=function () {
-    const secret="123456789"
+    const secret1="123456789"
     return jwt.sign(
         {
         _id:this._id,
         email:this.email
     },
-   secret,
+   secret1,
     {
         expiresIn:"1d"
     }
