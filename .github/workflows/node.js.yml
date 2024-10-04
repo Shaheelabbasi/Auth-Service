@@ -41,7 +41,7 @@ jobs:
 
     - name: Verify Metrics Endpoint
       run: |
-        curl -f http://localhost:9000/metrics
+        curl -fhttp://localhost:9000/metrics
 
     - name: Build and push Docker Image
       uses: mr-smithers-excellent/docker-build-push@v4
